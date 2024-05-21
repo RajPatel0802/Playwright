@@ -8,7 +8,7 @@ test('Verify the Swaglabs Functionality ', async ({ page }) => {
     const Home = new HomePO(page)
     const YourCart = new YourCartPO(page)
 
-    // Step 1: Navigate to the swaglsbs website
+    // Step 1: Navigate to the swag labs website
     await page.goto("/");
 
     // Step 2: Enter username, password, and click on the login button

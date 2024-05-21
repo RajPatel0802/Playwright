@@ -12,9 +12,7 @@ export class LoginPO {
         this.userNameTextBox = page.locator("#user-name")
         this.passwordTextBox = page.locator("#password")
         this.loginButton = page.locator("#login-button")
-
-
-    }
+        }
 
     async enterUserNameAndPassword(userName, password) {
         await this.userNameTextBox.fill(userName)
