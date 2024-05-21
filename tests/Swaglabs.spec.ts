@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPO } from './pageobject/LoginPO';
 import { HomePO } from './pageobject/HomePO';
 import { YourCartPO } from './pageobject/YourCartPO';
-test('Verify the Swaglabs Functionality ', async ({ page }) => {
+test('Verify the Swag labs Functionality ', async ({ page }) => {
 
     const Login = new LoginPO(page)
     const Home = new HomePO(page)
@@ -18,12 +18,12 @@ test('Verify the Swaglabs Functionality ', async ({ page }) => {
     // Step 3: Verify the Product page
     expect(await Home.getTextOfHeaderText()).toEqual("Products")
 
-    // Step 4: Add Two product into the cart 
+    // Step 4: Add Two product into the cart
     await Home.clickOnTheAddToCartButton("Sauce Labs Backpack")
     await Home.clickOnTheAddToCartButton("Sauce Labs Bike Light")
 
     // Step 5: Verify Cat badge has a valid count
-    expect(await Home.getTextOfbadge()).toEqual("3")
+    expect(await Home.getTextOfBadge()).toEqual("2")
     await Home.clickOnCartButton()
 
     // Step 6: Verify Your cart screen
