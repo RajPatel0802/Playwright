@@ -23,7 +23,7 @@ test('Verify the Swaglabs Functionality ', async ({ page }) => {
     await Home.clickOnTheAddToCartButton("Sauce Labs Bike Light")
 
     // Step 5: Verify Cat badge has a valid count
-    expect(await Home.getTextOfbadge()).toEqual("2")
+    expect(await Home.getTextOfbadge()).toEqual("3")
     await Home.clickOnCartButton()
 
     // Step 6: Verify Your cart screen
