@@ -14,6 +14,7 @@ export class HomePO {
     }
 
     async getTextOfHeaderText() {
+        console.log("Login completed")
         return await this.headerText.innerText()
     }
 
@@ -22,6 +23,7 @@ export class HomePO {
     }
 
     async getTextOfBadge() {
+        console.log("Product added into the cart")
         return await this.cartBadgeText.innerText()
     }
 
