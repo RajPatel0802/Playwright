@@ -1,4 +1,4 @@
-import { expect, Locator, Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 
 export class LoginPO {
     page: Page
@@ -12,9 +12,9 @@ export class LoginPO {
         this.userNameTextBox = page.locator("#user-name")
         this.passwordTextBox = page.locator("#password")
         this.loginButton = page.locator("#login-button")
-        }
+    }
 
-    async enterUserNameAndPassword(userName, password) {
+    async enterUserNameAndPassword(userName: string, password: string) {
         await this.userNameTextBox.fill(userName)
         await this.passwordTextBox.fill(password)
     }
