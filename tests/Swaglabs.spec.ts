@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPO } from './pageobject/LoginPO';
 import { HomePO } from './pageobject/HomePO';
 import { YourCartPO } from './pageobject/YourCartPO';
-test.describe('Verify the Swag labs Functionality ', () => {
+
 
     test("Verify that user can add the Product into cart", async ({ page }) => {
         const Login = new LoginPO(page)
@@ -58,4 +58,4 @@ test.describe('Verify the Swag labs Functionality ', () => {
         expect(await YourCart.getHeaderTextOfYourCart()).toEqual("Your Cart")
     })
 
-});
+
