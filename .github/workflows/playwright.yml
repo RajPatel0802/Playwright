@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Swaglabs E2E test case
 on:
   push:
     branches: [ main, master ]
@@ -6,7 +6,7 @@ on:
     branches: [ main, master ]
 
   schedule:
-    - cron: '41 5 * * *'
+    - cron: '30 3 * * *'
 jobs:
   test:
     timeout-minutes: 60
