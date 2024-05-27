@@ -44,7 +44,7 @@ import { YourCartPO } from './pageobject/YourCartPO';
         await Login.clickOnLoginButton()
 
         // Step 3: Verify the Product page
-        expect(await Home.getTextOfHeaderText()).toEqual("sProducts")
+        expect(await Home.getTextOfHeaderText()).toEqual("Products")
 
         // Step 4: Add Two product into the cart
         await Home.clickOnTheAddToCartButton("Sauce Labs Backpack")
