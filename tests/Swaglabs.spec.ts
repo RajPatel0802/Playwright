@@ -3,12 +3,19 @@ import { LoginPO } from './pageobject/LoginPO';
 import { HomePO } from './pageobject/HomePO';
 import { YourCartPO } from './pageobject/YourCartPO';
 import { loginData, productData, viewCartData } from "./pagedata/commondata"
+import { allure } from "allure-playwright";
 
 
 test("Verify that user can add the Product into cart", async ({ page }) => {
     const Login = new LoginPO(page)
     const Home = new HomePO(page)
     const YourCart = new YourCartPO(page)
+    await allure.label("Swaglab", "Swaglabs test");
+    await allure.epic("Product added into cart");
+    await allure.story("Product ");
+    await allure.attachment("basic-page-screen", await page.screenshot(), {
+        contentType: "image/png",
+      });   
 
     // Step 1: Navigate to the swag labs website
     await page.goto("/");
@@ -19,9 +26,15 @@ test("Verify that user can add the Product into cart", async ({ page }) => {
 
     // Step 3: Verify the Product page
     expect(await Home.getTextOfHeaderText()).toEqual(productData.headerText)
+    await allure.attachment("Product header", await page.screenshot(), {
+        contentType: "image/png",
+      });
 
     // Step 4: Add Two product into the cart
     await Home.clickOnTheAddToCartButton(productData.product1)
+    await allure.attachment("Product page", await page.screenshot(), {
+        contentType: "image/png",
+      });
     await Home.clickOnTheAddToCartButton(productData.product2)
 
     // Step 5: Verify Cat badge has a valid count
