@@ -3,5 +3,6 @@
         "commondata",
         "pagedata",
         "pageobject"
-    ]
+    ],
+    "CodeGPT.apiKey": "OpenAI"
 }

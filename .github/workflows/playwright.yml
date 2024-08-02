@@ -25,34 +25,34 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
-      - name: Install Allure CLI
-        run: |
-          npm install -g allure-commandline --save-dev
+      # - name: Install Allure CLI
+      #   run: |
+      #     npm install -g allure-commandline --save-dev
 
-      - name: Generate Allure Report
-        run: allure generate my-allure-results -o allure-report --clean
+      # - name: Generate Allure Report
+      #   run: allure generate my-allure-results -o allure-report --clean
 
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v2
-        with:
-         name: allure-report
-         path: allure-report
+      # - name: Upload Allure Report
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #    name: allure-report
+      #    path: allure-report
     
-      - name: Upload Allure Result
-        uses: actions/upload-artifact@v2
-        with:
-         name: allure-results
-         path: allure-results 
+      # - name: Upload Allure Result
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #    name: allure-results
+      #    path: allure-results 
 
-      - name: Publish Allure Report
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: allure-report
+      # - name: Publish Allure Report
+      #   uses: actions/upload-pages-artifact@v1
+      #   with:
+      #     path: allure-report
       
-      - name: Publish Allure Results
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: allure-results
+      # - name: Publish Allure Results
+      #   uses: actions/upload-pages-artifact@v1
+      #   with:
+      #     path: allure-results
 
       # - uses: actions/upload-artifact@v4
       #   if: always()

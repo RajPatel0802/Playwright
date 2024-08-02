@@ -8,6 +8,7 @@ export class LoginPO {
 
 
     constructor(page: Page) {
+         
         this.page = page;
         this.userNameTextBox = page.locator("#user-name")
         this.passwordTextBox = page.locator("#password")

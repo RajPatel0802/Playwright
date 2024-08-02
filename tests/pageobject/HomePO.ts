@@ -1,4 +1,4 @@
-import { expect, Locator, Page } from "@playwright/test";
+import {  Locator, Page } from "@playwright/test";
 
 export class HomePO {
     page: Page
@@ -23,7 +23,7 @@ export class HomePO {
     }
 
     async getTextOfBadge() {
-        console.log("Product added into the cart")
+        
         return await this.cartBadgeText.innerText()
     }
 
