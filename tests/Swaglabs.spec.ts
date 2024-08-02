@@ -33,6 +33,7 @@ test("Verify that user can add the Product into cart", async ({ page }) => {
 
     // Step 6: Verify Your cart screen
     expect(await YourCart.getHeaderTextOfYourCart()).toEqual(viewCartData.headerText)
+    console.log("Test case completed")
 })
 
 test("Verify that user can add the Product into cart Part 2", async ({ page }) => {
